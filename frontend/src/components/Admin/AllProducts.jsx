@@ -15,8 +15,8 @@ const AllProducts = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(`${server}/product/admin-all-products`, {withCredentials: true}).then((res) => {
-        setData(res.data.products);
+    axios.get(`${server}/product/admin-all-products`, { withCredentials: true }).then((res) => {
+      setData(res.data.products);
     })
   }, []);
 
@@ -73,11 +73,11 @@ const AllProducts = () => {
   const row = [];
 
   data &&
-  data.forEach((item) => {
+    data.forEach((item) => {
       row.push({
         id: item._id,
         name: item.name,
-        price: "US$ " + item.discountPrice,
+        price: "TRY₺ " + item.discountPrice,
         Stock: item.stock,
         sold: item?.sold_out,
       });
@@ -85,15 +85,15 @@ const AllProducts = () => {
 
   return (
     <>
-        <div className="w-full mx-8 pt-1 mt-10 bg-white">
-          <DataGrid
-            rows={row}
-            columns={columns}
-            pageSize={10}
-            disableSelectionOnClick
-            autoHeight
-          />
-        </div>
+      <div className="w-full mx-8 pt-1 mt-10 bg-white">
+        <DataGrid
+          rows={row}
+          columns={columns}
+          pageSize={10}
+          disableSelectionOnClick
+          autoHeight
+        />
+      </div>
     </>
   );
 };
