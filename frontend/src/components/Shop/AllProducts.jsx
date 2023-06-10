@@ -39,7 +39,7 @@ const AllProducts = () => {
     },
     {
       field: "Stock",
-      headerName: "Dönem Süresi",
+      headerName: "Max Dönem Süresi",
       type: "number",
       minWidth: 80,
       flex: 0.5,
