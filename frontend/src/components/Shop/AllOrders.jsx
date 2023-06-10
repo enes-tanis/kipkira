@@ -37,7 +37,7 @@ const AllOrders = () => {
       type: "date",
       minWidth: 130,
       flex: 0.8,
-    },    {
+    }, {
       field: "endData",
       headerName: "Bitiş Tarihi",
       type: "date",
@@ -78,7 +78,7 @@ const AllOrders = () => {
     orders.forEach((item) => {
       row.push({
         id: item._id,
-        total: "US$ " + item.totalPrice,
+        total: "TRY₺ " + item.totalPrice,
         status: item.status,
         startData: item.start,
         endData: item.end,

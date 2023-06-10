@@ -19,7 +19,7 @@ const Wishlist = ({ setOpenWishlist }) => {
   };
 
   const addToCartHandler = (data) => {
-    const newData = {...data, qty:1};
+    const newData = { ...data, qty: 1 };
     dispatch(addTocart(newData));
     setOpenWishlist(false);
   }
@@ -74,7 +74,7 @@ const Wishlist = ({ setOpenWishlist }) => {
   );
 };
 
-const CartSingle = ({ data,removeFromWishlistHandler,addToCartHandler }) => {
+const CartSingle = ({ data, removeFromWishlistHandler, addToCartHandler }) => {
   const [value, setValue] = useState(1);
   const totalPrice = data.discountPrice * value;
 
@@ -82,8 +82,8 @@ const CartSingle = ({ data,removeFromWishlistHandler,addToCartHandler }) => {
     <div className="border-b p-4">
       <div className="w-full 800px:flex items-center">
         <RxCross1 className="cursor-pointer 800px:mb-['unset'] 800px:ml-['unset'] mb-2 ml-2"
-        onClick={() => removeFromWishlistHandler(data)}
-        color="#D14D72"
+          onClick={() => removeFromWishlistHandler(data)}
+          color="#D14D72"
         />
         <img
           src={`${backend_url}/${data?.images[0]}`}
@@ -94,13 +94,13 @@ const CartSingle = ({ data,removeFromWishlistHandler,addToCartHandler }) => {
         <div className="pl-[5px] text-[#D14D72]">
           <h1>{data.name}</h1>
           <h4 className="font-[600] pt-3 800px:pt-[3px] text-[17px] text-[#D14D72] font-Roboto">
-            US${totalPrice}
+            TRY₺{totalPrice}
           </h4>
         </div>
         <div>
           <BsCartPlus size={20} className="cursor-pointer ml-5" tile="Add to cart"
-          color="#D14D72"
-           onClick={() => addToCartHandler(data)}
+            color="#D14D72"
+            onClick={() => addToCartHandler(data)}
           />
         </div>
       </div>

@@ -85,7 +85,7 @@ const AllEvents = () => {
         return (
           <>
             <Button
-            onClick={() => handleDelete(params.id)}
+              onClick={() => handleDelete(params.id)}
             >
               <AiOutlineDelete size={20} />
             </Button>
@@ -98,11 +98,11 @@ const AllEvents = () => {
   const row = [];
 
   events &&
-  events.forEach((item) => {
+    events.forEach((item) => {
       row.push({
         id: item._id,
         name: item.name,
-        price: "US$ " + item.discountPrice,
+        price: "TRY₺ " + item.discountPrice,
         Stock: item.stock,
         sold: item.sold_out,
       });
