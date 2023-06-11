@@ -625,10 +625,10 @@ export const footercompanyLinks = [
     name: "Bilgisayar ve Laptop",
   },
   {
-    name: "Kozmetik ve Kişisel Bakım",
+    name: "Spor & Outdoor",
   },
   {
-    name: "Ev ve Yaşam",
+    name: "Ev Aletleri",
   },
 ];
 
