@@ -21,10 +21,10 @@ const EventCard = ({ active, data }) => {
       } else {
         const cartData = { ...data, qty: 1 };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Ürün başarıyla sepete eklendi!");
       }
     }
-  }
+  };
   return (
     <div
       className={`w-full block bg-white rounded-lg ${
@@ -56,7 +56,12 @@ const EventCard = ({ active, data }) => {
           <Link to={`/product/${data._id}?isEvent=true`}>
             <div className={`${styles.button} text-[#fff]`}>See Details</div>
           </Link>
-          <div className={`${styles.button} text-[#fff] ml-5`} onClick={() => addToCartHandler(data)}>Add to cart</div>
+          <div
+            className={`${styles.button} text-[#fff] ml-5`}
+            onClick={() => addToCartHandler(data)}
+          >
+            Add to cart
+          </div>
         </div>
       </div>
     </div>

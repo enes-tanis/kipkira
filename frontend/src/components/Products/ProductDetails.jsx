@@ -71,7 +71,7 @@ const ProductDetails = ({ data }) => {
       } else {
         const cartData = { ...data, qty: count };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Ürün sepete başarıyla eklendi!");
       }
     }
   };

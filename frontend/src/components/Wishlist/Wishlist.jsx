@@ -22,7 +22,7 @@ const Wishlist = ({ setOpenWishlist }) => {
     const newData = { ...data, qty: 1 };
     dispatch(addTocart(newData));
     setOpenWishlist(false);
-  }
+  };
 
   return (
     <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10">
@@ -54,7 +54,7 @@ const Wishlist = ({ setOpenWishlist }) => {
               <div className={`${styles.noramlFlex} p-4`}>
                 <AiOutlineHeart size={25} color="#D14D72" />
                 <h5 className="pl-2 text-[20px] font-[500] text-[#D14D72]">
-                  {wishlist && wishlist.length} items
+                  {wishlist && wishlist.length} Ürün
                 </h5>
               </div>
 
@@ -63,7 +63,12 @@ const Wishlist = ({ setOpenWishlist }) => {
               <div className="w-full border-t">
                 {wishlist &&
                   wishlist.map((i, index) => (
-                    <CartSingle key={index} data={i} removeFromWishlistHandler={removeFromWishlistHandler} addToCartHandler={addToCartHandler} />
+                    <CartSingle
+                      key={index}
+                      data={i}
+                      removeFromWishlistHandler={removeFromWishlistHandler}
+                      addToCartHandler={addToCartHandler}
+                    />
                   ))}
               </div>
             </div>
@@ -81,7 +86,8 @@ const CartSingle = ({ data, removeFromWishlistHandler, addToCartHandler }) => {
   return (
     <div className="border-b p-4">
       <div className="w-full 800px:flex items-center">
-        <RxCross1 className="cursor-pointer 800px:mb-['unset'] 800px:ml-['unset'] mb-2 ml-2"
+        <RxCross1
+          className="cursor-pointer 800px:mb-['unset'] 800px:ml-['unset'] mb-2 ml-2"
           onClick={() => removeFromWishlistHandler(data)}
           color="#D14D72"
         />
@@ -98,7 +104,10 @@ const CartSingle = ({ data, removeFromWishlistHandler, addToCartHandler }) => {
           </h4>
         </div>
         <div>
-          <BsCartPlus size={20} className="cursor-pointer ml-5" tile="Add to cart"
+          <BsCartPlus
+            size={20}
+            className="cursor-pointer ml-5"
+            tile="Add to cart"
             color="#D14D72"
             onClick={() => addToCartHandler(data)}
           />

@@ -56,7 +56,7 @@ const ProductCard = ({ data, isEvent }) => {
       } else {
         const cartData = { ...data, qty: 1 };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Ürün sepete başarıyla eklendi!");
       }
     }
   };
